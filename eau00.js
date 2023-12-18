@@ -5,7 +5,7 @@ function combinaison (){
                 if ((i === k) || (i === j) || (j === k)){
                 }
                 else{
-                    console.log(i, j, k)
+                    console.log(`${i}${j}${k}`)
                 }
             }
         } 
