@@ -16,3 +16,5 @@ function reversedArgument (){
         }
     }
 }
+
+reversedArgument()
