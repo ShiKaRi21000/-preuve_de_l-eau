@@ -1,6 +1,6 @@
 
 function isPrime(n) {
-    
+
     if (n <= 1) return false
 
     for (var i = 2; i <= n - 1; i++)
@@ -22,7 +22,7 @@ function nbrPremier (nbr){
         }
     }
 }
-isPrime()
+
 nbrPremier(process.argv[2])
 
 
