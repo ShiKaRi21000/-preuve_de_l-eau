@@ -16,13 +16,13 @@ function nbrPremier (nbr){
         console.log( -1)
     }
     else {
-        for (var i = nbr; i < (nbr * 4); i++)
+        for (var i = nbr + 1; i < (nbr * 4); i++)
             if (isPrime(i)){
                 return console.log(i)
         }
     }
 }
 
-nbrPremier(process.argv[2])
+nbrPremier(parseInt(process.argv[2]))
 
 
