@@ -1,25 +1,36 @@
+//récupération de donnée
+function getArgument () {
+    return process.argv[2]
+}
 
-function queDesChiffres (chaineTester) {
-        let chiffre = ""
+//gestion d'erreur
+function getValidArguments (argument) {
+    if (argument === undefined){
+        throw new Error("Erreur: Il faut une chaine de caractère pour la suite du programme")
+    }
+}
 
-        for (i of chaineTester){
-            if (Number.isInteger(parseInt(i))){
-                chiffre += i
-            }
-            else {
-                console.log("Error: la chaine de caractère ne contient pas que des chiffres")
-                break
-            }
+//fonction utilitaire
+function testChiffre (argument) {
+    let nombre = ""
+    for (let i of argument){
+        if(!isNaN(i))
+        nombre += i
         }
-        if (chiffre === chaineTester) {
-            console.log ("La chaine de caractère ne contient que des chiffres.")
-        }
+    if(nombre === argument){
+        return true
+    }
+    return false
+}
+
+
+//affichage
+function resultat (resultat){
+    if (resultat){
+        return console.log("La chaine de caractère contient que des chiffres.")
+    }
+    return console.log("La chaine de caractère ne contient pas que des chiffres")
     }
 
-if (process.argv[2] === ""){
-    console.log("Error: la chaine de caractère est vide")
-}
-
-else {
-    queDesChiffres (process.argv[2])
-}
+getValidArguments(getArgument())
+resultat(testChiffre(getArgument()))
