@@ -16,8 +16,7 @@ function valeurDernierIndex(arguments){
     return valeurDernierIndex
 }
 
-function resultat (){
-    if (getValidArguments(getArgument())){
+function verificationDesValeurs (){
         const dernierIndex = valeurDernierIndex(getArgument())
         for(let i = 0; i < getArgument().length -2; i++){
             if (dernierIndex === getArgument()[i]){
@@ -26,5 +25,11 @@ function resultat (){
         }
         return -1
     }
+
+function resultat(){
+    if (getValidArguments(getArgument())){
+        return verificationDesValeurs()
+    }
+    return console.log("Il faut au moins 2 arguments pour que cela fonctionne")
 }
 console.log(resultat())
