@@ -23,26 +23,24 @@ function arraySort(array){
 }
 
 function compareValue (value){
-        let differenceArray = []
-        for (let i = 0; i < value.length; i++){
-            for(let j = 0; j < value.length; j++){
-                if(value[i] === value[j]){
-                }
-                else {
-                    let resultat = i - j
-                    differenceArray.push(resultat)
-                }
+    let differenceArray = []
+    for (let i = 0; i < value.length; i++){
+        for(let j = 0; j < value.length; j++){
+            if (value[i] === value[j]){
             }
-            return differenceArray
-        }
+            else{
+                differenceArray.push(value[j] - value[i])
+            }
+        }  
+    return differenceArray
     }
+}
 
-console.log(compareValue(arraySort(getArgument())))
+function resultat (){
+    if(getValidArguments(getArgument())){
+        return console.log(arraySort(compareValue(arraySort(getArgument())))[0])
+    }
+}
 
-// function resultat (){
-//     if(getValidArguments(getArgument())){
-//         return arraySort(compareValue(arraySort(getArgument())))[0]
-//     }
-// }
-// console.log(arraySort(compareValue(arraySort(getArgument()))))
+resultat()
 
