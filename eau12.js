@@ -17,14 +17,15 @@ function getValidArguments (arguments) {
 }
 
 function my_bubble_sort(arr){
-    for (let i = 0; i < arr.length; i++) { 
-        for (let j = 0; j < (arr.length - i - 1); j++) {
-            if (parseInt(arr[j]) > parseInt(arr[j + 1])){
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+    let new_array = arr
+    for (let i = 0; i < new_array.length; i++) { 
+        for (let j = 0; j < (new_array.length - i - 1); j++) {
+            if (parseInt(new_array[j]) > parseInt(new_array[j + 1])){
+                [new_array[j], new_array[j + 1]] = [new_array[j + 1], new_array[j]]
             }
         }
     }
-    console.log(arr)
+    return new_array
 }
 
 function resultat(){
